@@ -1,6 +1,7 @@
 package ru.env.rest;
 
 
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,12 +19,14 @@ public class SimpleUserRESTController {
     SimpleUserService simpleUserService;
 
     @RequestMapping(value = "/greetings", method = RequestMethod.GET)
+    @ApiOperation(value = "greetings", notes = "Hello Mr.Freeman")
     public ResponseEntity<String> greeting() {
         return ResponseEntity.ok("Hello world brrrro!");
     }
 
-    @RequestMapping(name = "/getAllUsers", method = RequestMethod.GET)
-    public ResponseEntity<List<SimpleTestUser>> getAllUser() {
+    @RequestMapping(value = "/getAllUsers", method = RequestMethod.GET)
+    @ApiOperation(value = "get list of all users from DB", notes="Get All users from DB")
+    public ResponseEntity<List<SimpleTestUser>> getAllUsers() {
         return ResponseEntity.ok(simpleUserService.getAllUsers());
     }
 

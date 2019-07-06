@@ -10,7 +10,7 @@ import java.util.List;
 @Mapper
 public interface SimpleUserMapper {
 
-    @Select("SELECT id, first_name, last_name FROM simple_user")
+    @Select("SELECT id, first_name as firstName, last_name as lastName FROM simple_user")
     List<SimpleTestUser> getAllUsers();
 
 }
