@@ -17,6 +17,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 //TODO: swagger config+security mb
 
+//TODO: config swagger in another classes
+
+//TODO: XML mapping is better, mb rewrite on XML
+
 @SpringBootApplication
 @ComponentScan({"ru.env.rest", "ru.env.service"})
 @MapperScan({"ru.env.mapper"})

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import ru.env.DTO.SimpleTestUser;
+import ru.env.DTO.UsersWithProducts;
 import ru.env.service.SimpleUserService;
 
 import java.util.List;
@@ -29,5 +30,12 @@ public class SimpleUserRESTController {
     public ResponseEntity<List<SimpleTestUser>> getAllUsers() {
         return ResponseEntity.ok(simpleUserService.getAllUsers());
     }
+
+    @RequestMapping(value = "/getUsersAndProducts", method = RequestMethod.GET)
+    @ApiOperation(value = "test test test", notes = "test test test")
+    public ResponseEntity<List<UsersWithProducts>> getUsersWithProducts() {
+        return ResponseEntity.ok(simpleUserService.getAllUsersWithProducts());
+    }
+
 
 }
