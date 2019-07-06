@@ -10,11 +10,12 @@ import java.util.List;
 @Service
 public class SimpleUserService {
 
-//    @Autowired
-//    SimpleUserMapper userDao;
+    @Autowired
+    SimpleUserMapper userDao;
 
-//    public List<SimpleTestUser> getAllUsers() {
-//        return userDao.getAllUsers();
-//    }
+    public List<SimpleTestUser> getAllUsers() {
+        return userDao.getAllUsers();
+    }
+
 
 }

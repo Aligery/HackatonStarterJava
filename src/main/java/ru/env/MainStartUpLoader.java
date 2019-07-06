@@ -1,6 +1,7 @@
 package ru.env;
 
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
@@ -9,7 +10,8 @@ import ru.env.rest.SimpleUserRESTController;
 
 
 @SpringBootApplication
-@ComponentScan({"ru.env.mapper", "ru.env.rest", "ru.env.service"})
+@ComponentScan({"ru.env.rest", "ru.env.service"})
+@MapperScan({"ru.env.mapper"})
 public class MainStartUpLoader {
 
 

@@ -17,14 +17,14 @@ public class SimpleUserRESTController {
     @Autowired
     SimpleUserService simpleUserService;
 
-    @RequestMapping(name = "/greetings", method = RequestMethod.GET)
+    @RequestMapping(value = "/greetings", method = RequestMethod.GET)
     public ResponseEntity<String> greeting() {
-        return ResponseEntity.ok("Hello world!");
+        return ResponseEntity.ok("Hello world brrrro!");
     }
 
-//    @RequestMapping(name = "/getAllUsers", method = RequestMethod.GET)
-//    public ResponseEntity<List<SimpleTestUser>> getAllUser() {
-//        return ResponseEntity.ok(simpleUserService.getAllUsers());
-//    }
+    @RequestMapping(name = "/getAllUsers", method = RequestMethod.GET)
+    public ResponseEntity<List<SimpleTestUser>> getAllUser() {
+        return ResponseEntity.ok(simpleUserService.getAllUsers());
+    }
 
 }
